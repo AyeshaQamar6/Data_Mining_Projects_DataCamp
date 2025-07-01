@@ -9,20 +9,20 @@ Analyzed distribution of math scores across all schools
 
 **Technical Approach:**
 
-*Data Preparation:*
+1. Data Preparation:
 Imported pandas/numpy for data manipulation
 Standardized column names (lowercase, underscore-separated)
 
-*Handled missing values:*
+2. Handled missing values:
 Dropped rows with missing math scores
 Filled missing test percentage values with median
 
-*Exploratory Analysis:*
+3. Exploratory Analysis:
 Generated descriptive statistics (mean, min/max, percentiles)
 Calculated borough-level math performance averages
 Identified top 10 schools by math scores
 
-*Data Visualization:*
+4. Data Visualization:
 Created bar plots showing borough performance comparisons
 Built histograms to visualize math score distributions
 Utilized Seaborn/Matplotlib for professional visualizations
