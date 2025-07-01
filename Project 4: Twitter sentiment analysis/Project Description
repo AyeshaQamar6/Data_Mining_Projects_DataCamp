@@ -1,0 +1,58 @@
+This project analyzes Twitter sentiment using Natural Language Processing (NLP) and machine learning. It classifies tweets into Positive, Negative, or Neutral sentiments using a Multinomial Naive Bayes model. The workflow includes data cleaning, preprocessing, model training, evaluation, and visualization.
+
+**Key Steps**
+1. Data Loading & Exploration
+Datasets Used:
+--twitter_training.csv (74,682 tweets)
+--twitter_validation.csv (validation set)
+
+Columns:
+--Tweet_ID, Topic, Sentiment, Tweet
+
+Initial Checks:
+--Removed "Irrelevant" sentiment tweets
+--Handled missing values in the Tweet column
+
+2. Text Preprocessing
+Cleaning Pipeline:
+--Lowercase conversion
+--URL/hashtag/mention removal
+--Punctuation/digit removal
+--Stopword removal (NLTK)
+--Stemming (PorterStemmer)
+
+Result: Created a Clean_Tweet column for analysis.
+
+3. Feature Engineering
+Bag-of-Words Model:
+--Transformed text into numerical features using CountVectorizer.
+--Created feature matrix X and target vector y.
+
+4. Model Training
+Algorithm: Multinomial Naive Bayes
+Train-Test Split: 80% training, 20% testing
+Libraries: scikit-learn for vectorization and model training
+
+5. Evaluation
+Accuracy: 75.58%
+
+6. Visualizations
+Sentiment Distribution: Bar plot showing tweet counts per sentiment (Positive dominant).
+Word Clouds: Generated for each sentiment to highlight frequent words (e.g., "love" in Positive, "hate" in Negative).
+
+
+**Technical Details:**
+Libraries Used: 
+--pandas, nltk, re, string
+--scikit-learn (CountVectorizer, MultinomialNB)
+--seaborn, matplotlib, wordcloud
+
+Preprocessing Impact:
+--Stemming reduced words like "getting" → "get".
+--Stopword removal filtered out noise (e.g., "the", "and").
+
+
+**Key Insights:**
+Positive Bias: Most tweets were positive (e.g., gaming-related topics).
+Model Strengths: High recall for negative sentiment (84%), useful for detecting criticism.
+Limitations: Neutral sentiment had lower recall (61%), indicating difficulty identifying nuanced opinions.
