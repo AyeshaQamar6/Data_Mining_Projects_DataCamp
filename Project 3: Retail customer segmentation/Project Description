@@ -2,25 +2,24 @@ This project performs customer segmentation for a retail business using unsuperv
 
 **Key Steps:**
 
-*Data Loading and Inspection*
+1. Data Loading and Inspection
 Imported essential libraries: Pandas for data manipulation, Matplotlib and Seaborn for visualization, and Scikit-learn for machine learning
 Loaded the mall customers dataset containing: Customer ID, Gender, Age, Annual Income (k$), Spending Score (1-100)
 
-*Exploratory Data Analysis (EDA):*
-
+2. Exploratory Data Analysis (EDA):
 Analyzed distributions of key features:
 --Age distribution shows most customers are between 30-40 years
 --Annual income peaks at $60k-80k
 --Spending scores follow a normal distribution
 Visualized categorical distribution of gender
 
-*Data Preprocessing*
+3. Data Preprocessing
 Performed feature scaling using StandardScaler to normalize:
 --Annual Income
 --Spending Score
 Ensured features were on comparable scales for clustering
 
-*K-Means Clustering:*
+4. K-Means Clustering:
 Determined optimal cluster count (k=5) using the Elbow Method
 Implemented K-Means clustering to segment customers into groups
 Identified distinct customer segments:
@@ -30,10 +29,11 @@ Identified distinct customer segments:
 --Low-income, high-spending
 --Low-income, low-spending
 
-*Visualization:*
+5. Visualization:
 Created scatter plots showing clusters in 2D space (Income vs Spending Score)
 Visualized cluster centroids to understand segment characteristics
 Generated cluster profile summaries
+
 
 **Key Findings:**
 Identified 5 distinct customer segments with unique purchasing patterns
@@ -41,12 +41,14 @@ High-income customers show polarized spending behavior (either high or low)
 Younger customers tend to have higher spending scores
 Gender distribution is relatively balanced across segments
 
+
 **Skills Demonstrated:**
 Data preprocessing and feature scaling
 K-Means clustering implementation
 Hyperparameter tuning using the Elbow Method
 Data visualization with Matplotlib and Seaborn
 Customer segmentation strategy development
+
 
 **Business Applications:**
 The segmentation enables personalized marketing strategies:
