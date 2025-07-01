@@ -1,0 +1,44 @@
+This project addresses a real-world agricultural problem: determining which single soil property (Nitrogen, Phosphorus, Potassium, or pH) is most critical for predicting optimal crop selection when resources are limited. The solution uses advanced feature selection techniques and model validation to provide actionable insights for farmers. A farmer can only afford to measure one soil metric due to budget constraints. We must identify which metric (N, P, K, or pH) has the strongest predictive power for crop selection to maximize yield potential.
+
+**Key Steps:**
+
+1. Data Exploration & Preprocessing:
+Analyzed 2,200 soil samples with N, P, K, pH, and crop labels
+Encoded categorical crop labels and split data (80% train, 20% test)
+Scaled features to normalize values
+
+2. Feature Selection Techniques
+Four robust methods identified key predictors:
+--Mutual Information: Measures dependency between features/target
+--Random Forest Importance: Uses Gini impurity reduction
+--Recursive Feature Elimination (RFE): Iteratively removes weak features
+--Permutation Importance: Quantifies accuracy drop when features are randomized
+
+3. Consolidated Ranking
+Features ranked by average position across all methods:
+--Potassium (K) → Avg Rank: 1.0
+--Phosphorus (P) → Avg Rank: 2.0
+--Nitrogen (N) → Avg Rank: 3.0
+--pH → Avg Rank: 4.0
+
+4. Model Validation
+Full Model Accuracy: 74.55% (all 4 features)
+Single-Feature (K) Accuracy: 29.32%
+Potassium alone captures 39% of full model performance
+
+
+**Key Findings:**
+Potassium (K) is the strongest single predictor for crop selection
+pH is critical for nutrient availability but ranks lower than K
+Using all features improves accuracy by 45% vs. single-feature models
+Results align with agronomic principles: Potassium governs enzyme activation and drought resistance
+
+
+**Interpretation:**
+Why Potassium? Directly influences water regulation, protein synthesis, and disease resistance in plants
+Practical Impact: Farmers should prioritize K testing when resources are limited
+Balanced Approach: For maximum accuracy, measure all properties if possible
+
+
+**Technical Stack:**
+Python, pandas, NumPy, Scikit-learn (Random Forest, RFE, Mutual Info), Matplotlib/Seaborn for visualization
