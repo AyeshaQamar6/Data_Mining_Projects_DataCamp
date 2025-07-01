@@ -1,0 +1,52 @@
+This project analyzes healthcare data to predict heart disease in patients using machine learning techniques. It focuses on preprocessing a real-world dataset, exploring feature correlations, training predictive models (Logistic Regression and Decision Trees), and evaluating model performance to identify key risk factors for heart disease.
+
+**Key Steps:**
+
+1. Data Loading & Initial Inspection:
+Imported UCI Heart Disease dataset (heart_disease_uci.csv)
+Performed initial data exploration:
+--Shape: 920 rows × 16 features
+--Displayed first 5 rows
+--Generated descriptive statistics
+--Identified missing values (e.g., 66% missing in thal)
+
+2. Data Preprocessing & Cleaning:
+Removed irrelevant columns (id)
+Created binary target variable (target = 1 if heart disease present)
+Handled missing values:
+--Replaced placeholder values (e.g., 4/5/9 in ca) with NaN
+--Imputed ca with median, thal with mode
+Addressed outliers using IQR method (capped values in trestbps, chol, thalch)
+Converted categorical features to category dtype
+Removed duplicate rows (2 instances)
+
+3. Exploratory Data Analysis (EDA):
+Visualized target distribution (55.3% heart disease cases)
+Generated correlation matrix and heatmap
+Identified top correlations with target:
+--thalch (-0.39), exang (0.34), oldpeak (0.31)
+
+4. Feature Engineering:
+Created binary target from original num column
+Processed special placeholder values in categorical features
+
+5. Technical Highlights:
+Built data processing pipeline with SimpleImputer and StandardScaler
+Utilized scikit-learn for model training
+Implemented visualizations using Seaborn and Matplotlib
+Computed evaluation metrics (accuracy, precision, recall, F1-score)
+
+
+**Skills Demonstrated:**
+Data Preprocessing: Missing value imputation, outlier handling, categorical encoding
+Machine Learning: Logistic Regression, Decision Trees, pipeline construction
+Evaluation Metrics: Accuracy, Precision, Recall, F1-score, ROC-AUC
+Data Visualization: Correlation heatmaps, target distribution plots
+Statistical Analysis: Descriptive statistics, correlation studies
+
+
+**Key Insights:**
+Key risk factors identified: Exercise-induced angina (exang), ST depression (oldpeak)
+Dataset imbalance: 55.3% positive heart disease cases
+Strong negative correlation: Max heart rate (thalch) vs heart disease
+Critical preprocessing step: 66% missing values in thal required mode imputation
