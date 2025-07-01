@@ -1,0 +1,50 @@
+This project focuses on identifying fraudulent transactions in a bank's dataset using advanced classification algorithms. Key steps include data preparation, exploratory analysis, class imbalance handling, feature engineering, and model training/evaluation with XGBoost and Random Forest classifiers.
+
+**Key Steps:**
+
+1. Data Preparation & Exploration
+Loaded and inspected fraud detection datasets (fraudTrain.csv, fraudTest.csv)
+Performed initial EDA: dataset shapes (42,831 train / 42,783 test rows), column analysis, missing values check
+Identified extreme class imbalance (99.07% legitimate vs 0.93% fraud in training)
+
+2. Data Validation & Cleaning
+Validated critical features (target variable is_fraud, numerical columns)
+Handled missing values and invalid entries
+Dropped irrelevant columns (Unnamed: 0, personal identifiers, etc.)
+Featured Engineering:
+--Extracted time features from transaction datetime (hour, weekday, month)
+--Calculated geographical distance between user and merchant
+--Added transaction frequency and velocity metrics
+
+3.Class Imbalance Handling
+Applied SMOTE oversampling to balance fraud/non-fraud ratio (30% fraud)
+Processed data through pipeline:
+--Scaled numerical features
+--One-hot encoded categorical variables (category, gender, state, job)
+
+4.Model Training
+Implemented two ensemble classifiers:
+--Random Forest with class_weight='balanced_subsample'
+--XGBoost with scale_pos_weight adjusted for imbalance
+Performed hyperparameter tuning using RandomizedSearchCV
+Optimal parameters found:
+--RF: {'n_estimators': 300, 'max_depth': 30}
+--XGB: {'learning_rate': 0.2, 'subsample': 0.6}
+
+5. Model Evaluation
+Key metrics on test set:
+--Random Forest: ROC-AUC = 0.9575
+--XGBoost: ROC-AUC = 0.9432
+Generated evaluation visuals:
+--ROC curves
+--Precision-Recall curves
+--Confusion matrices
+Fraud detection rate: 85.2% (RF), 79.6% (XGB)
+
+
+**Key Skills Demonstrated**
+Anomaly detection: Identified rare fraud patterns in imbalanced data
+Ensemble methods: Implemented and tuned XGBoost/Random Forest
+Feature engineering: Created spatial and temporal transaction features
+Class imbalance handling: SMOTE oversampling and class weighting
+Model evaluation: ROC-AUC, precision-recall, confusion matrices
