@@ -1,0 +1,40 @@
+This project analyzes standardized test data from NYC public schools to identify top-performing institutions in math. The analysis focuses on understanding performance distribution across boroughs and highlighting schools with exceptional math scores.
+
+*Key Features:*
+Cleaned and standardized education dataset (handling missing values, column normalization)
+Performed exploratory data analysis (EDA) to uncover performance patterns
+Identified top 10 schools by math proficiency
+Visualized borough-level performance differences
+Analyzed distribution of math scores across all schools
+
+**Technical Approach:**
+
+*Data Preparation:*
+Imported pandas/numpy for data manipulation
+Standardized column names (lowercase, underscore-separated)
+Handled missing values:
+Dropped rows with missing math scores
+Filled missing test percentage values with median
+
+*Exploratory Analysis:*
+Generated descriptive statistics (mean, min/max, percentiles)
+Calculated borough-level math performance averages
+Identified top 10 schools by math scores
+
+*Data Visualization:*
+Created bar plots showing borough performance comparisons
+Built histograms to visualize math score distributions
+Utilized Seaborn/Matplotlib for professional visualizations
+
+**Key Findings:**
+Staten Island schools showed highest average math performance
+Specialized STEM schools dominated the top 10 rankings
+Math scores followed a roughly normal distribution with some high-performing outliers
+
+*Technical Skills Demonstrated:*
+Data cleaning and preprocessing
+Exploratory data analysis (EDA)
+Statistical analysis
+Data visualization
+Pandas/Numpy/Seaborn/Matplotlib proficiency
+Educational data interpretation
