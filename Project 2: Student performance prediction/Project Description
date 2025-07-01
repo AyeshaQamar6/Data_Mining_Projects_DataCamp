@@ -2,31 +2,32 @@ This project analyzes student performance data to predict whether students will 
 
 **Key Steps:**
 
-*Data Preparation:*
+1. Data Preparation:
 Combined datasets for Math (student-mat.csv) and Portuguese (student-por.csv) subjects
 Created a binary pass target variable (1 if final grade ≥ 10, 0 otherwise)
 Removed intermediate grade columns (G1, G2, G3) to simulate real-world prediction
 
-*Feature Engineering:*
+2. Feature Engineering:
 Encoded all categorical variables using Label Encoding
 Identified 30+ features including study time, school attendance, alcohol consumption, and family factors
 
-*Model Training:*
+3. Model Training:
 Implemented a Decision Tree Classifier with max_depth=5
 Split data into 80% training and 20% testing sets
 Achieved 71.3% accuracy on test data
 
-*Evaluation Metrics:*
+4. Evaluation Metrics:
+Classification report:
+--Precision: 75% (pass), 50% (fail)
+--Recall: 91% (pass), 23% (fail)
+--Confusion matrix visualization
 
-*Classification report:*
-Precision: 75% (pass), 50% (fail)
-Recall: 91% (pass), 23% (fail)
-Confusion matrix visualization
 
 *Key Visualizations:*
 Pass Rate by Study Time: Students studying 3-4 hours had 20-30% higher pass rates
 School/Gender Analysis: Urban school students outperformed rural peers, with females showing higher pass rates
 Confusion matrix showing model prediction patterns
+
 
 **Technical Approach:**
 Algorithms: Decision Tree (scikit-learn)
@@ -34,13 +35,12 @@ Libraries: Pandas, Scikit-learn, Matplotlib, Seaborn
 Preprocessing: Label Encoding for categorical variables
 Evaluation: Accuracy score, classification report, confusion matrix
 
-How to Reproduce:
-Place student-mat.csv and student-por.csv in working directory
 
 Model outputs:
 Trained classifier
 Evaluation metrics
 Visualizations in PNG format
+
 
 Insights:
 Study time has strong correlation with pass rates
