@@ -1,0 +1,6 @@
+In this beginner-friendly project, you'll use standardized test performance data from NYC's public schools to identify the schools with the best math results. You will analyze how performance varies by borough and determine the city's top ten performing schools. 
+
+This project primarily focuses on exploratory data analysis (EDA) using the pandas library.
+
+Skills developed: Data cleaning, exploratory data analysis, and data visualization with pandas.
+Resources: Exploring NYC Public School guided project (includes the dataset)
