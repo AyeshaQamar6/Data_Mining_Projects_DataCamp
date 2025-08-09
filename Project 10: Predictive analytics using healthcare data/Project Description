@@ -1,0 +1,55 @@
+This project analyzes sales data for a motorcycle parts company to understand revenue streams across product lines, warehouses, and time periods. The analysis focuses on calculating net revenue, identifying trends, and visualizing results to support data-driven business decisions.
+
+**Key Features:**
+
+1. Data Processing:
+Imported and cleaned sales transaction data
+Performed data validation and handled missing values
+Explored dataset structure (1,000 records, 8 columns)
+
+2. Database Setup:
+Created SQLite in-memory database
+Loaded processed data into SQL table for efficient querying
+
+3. Revenue Analysis:
+Complex SQL queries to calculate net revenue by:
+--Date
+--Warehouse (Central, North, West)
+--Product line (6 categories including Breaking systems, Engines)
+Cumulative revenue tracking per warehouse
+
+4. Visualization:
+Daily revenue trends by warehouse
+Time-series analysis of revenue patterns
+
+
+**Technical Implementation:**
+Python Libraries: pandas, numpy, sqlite3, matplotlib
+SQL Features: GROUP BY, SUM, ROUND, PARTITION BY, window functions
+Data Validation: Comprehensive null-checking and dtype verification
+Visualization: Interactive plots showing revenue trends
+
+
+**Insights Generated:**
+Revenue distribution across product lines
+Warehouse performance comparisons
+Time-based revenue patterns
+Cumulative revenue growth trends
+
+
+**Business Value:**
+Identified high-performing product lines
+Revealed warehouse efficiency differences
+Uncovered seasonal sales patterns
+Provided data foundation for inventory optimization
+
+
+**Skills Demonstrated:**
+SQL query optimization
+Data aggregation and transformation
+Business intelligence reporting
+Time-series analysis
+Data visualization
+Database management (SQLite)
+
+
