@@ -1,1 +1,46 @@
+This project focuses on analyzing transaction data from a retail store to uncover associations between products frequently purchased together. The goal is to identify patterns that can inform business strategies like product placement, promotions, and inventory management. The project leverages the Apriori algorithm for frequent itemset mining and association rule mining to generate actionable insights.
+
+**Key Steps:**
+
+1. Data Loading & Preprocessing
+Dataset: Transaction data with BillNo, Itemname, Quantity, Date, Price, CustomerID, and Country.
+Cleaning:
+--Handled missing values in BillNo and Itemname.
+--Filtered transactions to include only the United Kingdom.
+--Standardized item names (lowercase, stripped whitespace).
+Transaction Encoding:
+--Grouped items by BillNo to create transaction lists.
+--Used TransactionEncoder to convert transactions into a one-hot encoded matrix (items as columns, transactions as rows).
+
+2. Frequent Itemset Generation
+Applied the Apriori algorithm with min_support=0.02 to identify frequently co-occurring items.
+Top itemsets:
+--White hanging heart t-light holder (support: 10.76%)
+--Jumbo bag red retrospot (support: 9.63%)
+--Regency cakestand 3 tier (support: 8.37%)
+
+3. Association Rule Mining
+Generated rules using the lift metric (min. threshold: 1.0) to measure item interdependence.
+Added metrics: leverage (strength of item co-occurrence) and conviction (dependence direction).
+Top Rules:
+--{Green regency teacup, Roses regency teacup} → {Pink regency teacup} (lift: 20.13, confidence: 70.33%).
+--Rules were filtered for actionability (lift > 1.5, confidence > 0.4, single consequent).
+
+4. Visualization
+Scatter Plot: Visualized rules using support (x-axis), confidence (y-axis), and lift (bubble size).
+Interpretation: Highlighted high-lift rules for strategic decisions (e.g., bundling related products).
+
+
+**Key Insights:**
+Popular Items: Decorative items (e.g., t-light holders, cake stands) dominate frequent itemsets.
+Strong Associations: Teacups/saucers are often purchased together (high lift), suggesting cross-promotion opportunities.
+Business Impact: Rules can optimize shelf placement, discounts, and inventory planning.
+
+
+**Skills Demonstrated:**
+Data Wrangling: Cleaning, filtering, and encoding transactional data.
+Association Mining: Apriori algorithm for frequent itemsets, rule generation with lift/conviction.
+Visualization: Matplotlib/Seaborn for interpretable insights.
+Business Acumen: Translating patterns into actionable retail strategies.
+Outputs: Frequent itemsets, association rules, and visualizations.
 
