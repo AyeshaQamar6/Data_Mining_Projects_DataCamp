@@ -1,0 +1,46 @@
+This project implements a recommendation system that suggests movies to users based on their preferences, using collaborative filtering and matrix factorization techniques. The system analyzes user ratings to predict preferences and provide personalized movie recommendations.
+
+**Key Features:**
+
+1. Data Preprocessing:
+Loaded and merged movie ratings, movie details, tags, and genome scores
+Converted timestamps to datetime format
+Handled missing values and filtered sparse data (users with ≥20 ratings, movies with ≥20 ratings)
+Explored dataset characteristics and distributions
+
+2. Exploratory Data Analysis:
+Visualized rating distribution patterns
+Identified top 20 most-rated movies
+Analyzed dataset statistics and relationships
+
+3. Recommendation Techniques:
+Collaborative Filtering: Finds similar users/movies using cosine similarity
+Matrix Factorization: Uses Truncated SVD to reduce dimensionality
+Model Evaluation: Measures performance with Root Mean Squared Error (RMSE)
+
+4. Model Training & Evaluation:
+Split data into training/testing sets
+Implemented k-Nearest Neighbors for similarity calculations
+Optimized hyperparameters for best performance
+
+
+**Technical Implementation:**
+Collaborative filtering
+Matrix factorization
+Evaluation setup
+RMSE calculation
+
+
+**Results:**
+The system successfully predicts user preferences with low RMSE, demonstrating the effectiveness of the implemented techniques. Sample recommendations are generated based on user similarity and latent features extracted from the rating matrix.
+
+
+**Skills Demonstrated:**
+Data preprocessing and cleaning
+Collaborative filtering
+Matrix factorization (SVD)
+Model evaluation (RMSE)
+Data visualization
+Hyperparameter optimization
+
+
